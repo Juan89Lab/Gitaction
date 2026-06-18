@@ -1,13 +1,18 @@
 name: Diagnóstico del runner
-on: null
-workflow_dispatch: null
+
+on:
+  workflow_dispatch:
+
 jobs:
   diagnostico:
     runs-on: ubuntu-latest
+
     steps:
       - name: Mostrar sistema operativo
         run: uname -a
+
       - name: Mostrar carpeta actual
         run: pwd
+
       - name: Listar archivos
         run: ls -la
